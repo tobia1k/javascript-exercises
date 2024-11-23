@@ -3,11 +3,7 @@ const palindromes = function (str) {
     let firstHalf = formattedStr.slice(0, (Math.floor(formattedStr.length / 2)));
     let lastHalf = formattedStr.slice(Math.ceil(formattedStr.length / 2)).split("").reverse().join("");
 
-    for (let i = 0; i < firstHalf.length; i++) {
-        if (firstHalf[i] !== lastHalf[i])
-            return false;
-    }
-    return true;
+    return (firstHalf === lastHalf);
 };
 
 function formatStr(c) {
